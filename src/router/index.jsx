@@ -15,7 +15,7 @@ function Router() {
         {
           path: "/",
           element: <Page1 />,
-        },
+        },  
         {
           path: "/swap",
           element: <Page2 />,
