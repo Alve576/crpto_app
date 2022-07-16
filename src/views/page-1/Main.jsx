@@ -73,7 +73,7 @@ function Main() {
   return (
     <>
     <div className="grid grid-cols-12 gap-6 font-neuePlak" style={{minWidth: "380px"}}>
-      <div className="col-span-9 sm:col-span-12 lg:col-span-9 2xl:col-span-9">
+      <div className="col-span-9 sm:col-span-12 md:col-span-9 lg:col-span-9 xl:col-span-9 2xl:col-span-9">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {/* ----------------- First Card Start ----------------- */}
           <div className="intro-y w-full h-full"> 
