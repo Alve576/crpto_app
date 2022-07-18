@@ -30,11 +30,11 @@ function Main(props) {
       {/* BEGIN: Mobile Menu */}
       <div
         className={classnames({
-          "mobile-menu md:hidden hidden": true,
+          "mobile-menu md:hidden ": true,
           "mobile-menu--active": activeMobileMenu,
         })}
       >
-        <div className="mobile-menu-bar">
+        {/* <div className="mobile-menu-bar">
           <a href="" className="flex mr-auto">
             <img
               alt="Hydro Whales Mining Club Dashboard"
@@ -55,7 +55,7 @@ function Main(props) {
               }}
             />
           </a>
-        </div>
+        </div> */}
         <div className="scrollable">
           <a
             href="#"

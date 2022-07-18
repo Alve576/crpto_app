@@ -196,7 +196,7 @@ function Main() {
           
           
           {/* BEGIN: Vertical Bar Chart */}
-          <PreviewComponent className="intro-y box">
+          <PreviewComponent className="intro-y box hidden">
             {({ toggle }) => (
               <>
                 <div className="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">

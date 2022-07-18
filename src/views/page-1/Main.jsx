@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { db } from "@/firebase-config";
 import {  getFirestore,  onSnapshot,  query,  collection,  getDocs,  addDoc,  updateDoc,  deleteDoc,  doc,  getDoc,} from "firebase/firestore";
 import { fnHashRate, fnBTCMined, fnInvestmentValue, fnInitInvestment, fnTokens, fnDailyBTC, fnDailyHashs } from "@/firestoreData";
-
+import {AiOutlineArrowRight} from 'react-icons/ai'
 import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 
 import Analytics from "@/components/Analytics";
@@ -147,7 +147,7 @@ function Main() {
 
 
        {/* ----------------- Chart 2 Start ----------------- */}
-       <div className="col-span-12 lg:col-span-6 mt-8">
+       <div className="lg:block md:block  hidden col-span-12 lg:col-span-6 mt-8">
         <div className="intro-y box py-3 mt-12 sm:mt-5">  
           <div className="">
             <CustomBarChart value={dailyBTC} />
@@ -156,7 +156,7 @@ function Main() {
       </div>  
       {/* ----------------- Chart 2 End ----------------- */}
       {/* ----------------- Chart 1 start ----------------- */}
-      <div className="col-span-12 lg:col-span-6 mt-8">
+      <div className="lg:block md:block hidden col-span-12 lg:col-span-6 mt-8">
         <div className="intro-y box py-3 mt-12 sm:mt-5">  
           <div className="flex items-center justify-center">
             <Analytics />
@@ -174,12 +174,7 @@ function Main() {
       
           {/* ----------------- Fourth Card End ----------------- */}
 
-          <div className="lg:block col-span-3 md:col-span-3 xl:col-span-3 2xl:col-span-3">
-
-        
-          
-
-
+          <div className="lg:block col-span-9 md:col-span-3 xl:col-span-3 2xl:col-span-3">
               <div className="relative before:block before:absolute before:w-px before:h-[85%] before:bg-slate-200 before:dark:bg-darkmode-400 before:ml-5 before:mt-5">
                 <div className="intro-x relative flex items-center mb-3">
                   <div className="before:block before:absolute before:w-20 before:h-px before:bg-slate-200 before:dark:bg-darkmode-400 before:mt-5 before:ml-5">
@@ -190,38 +185,24 @@ function Main() {
                       />
                     </div>
                   </div>
-                  <div className="box px-5 py-3 ml-4 flex-1 zoom-in">
-                    <div className="flex items-center">
-                      <div className="font-medium text-dark dark:text-white">Phase 1 Holders Mint</div>
-                      <div className="text-xs text-slate-500 ml-auto">
+                  <div className="flex items-center box px-5 py-3 ml-4 flex-1 zoom-in">
+                    <div>
+                      <div className="flex items-center">
+                        <div className="font-medium text-dark dark:text-white">
+                          Phase 1 Holders Mint
+                        </div>
+                        
                       </div>
-                    </div>
-                    <div className="text-slate-500 mt-1">
-                      Click Me
-                    </div>
-                  </div>
-                </div>
-                <div className="intro-x relative flex items-center mb-3">
-                  <div className="before:block before:absolute before:w-20 before:h-px before:bg-slate-200 before:dark:bg-darkmode-400 before:mt-5 before:ml-5">
-                    <div className="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                      <img
-                        alt="Midone Tailwind HTML Admin Template"
-                        src={logoUrl}
-                      />
-                    </div>
-                  </div>
-                  <div className="box px-5 py-3 ml-4 flex-1 zoom-in">
-                    <div className="flex items-center">
-                      <div className="font-medium text-dark dark:text-white">Public Mint</div>
-                      <div className="text-xs text-slate-500 ml-auto">
+                      <div className="text-slate-500">
+                        <div className="mt-1">
+                          Click Me
+                          
+                        </div>
                       
                       </div>
                     </div>
-                    <div className="text-slate-500">
-                      <div className="mt-1">
-                        Click Me
-                      </div>
-                    
+                    <div className="text-xs text-slate-500 ml-auto">
+                        <AiOutlineArrowRight/>
                     </div>
                   </div>
                 </div>
@@ -234,12 +215,53 @@ function Main() {
                       />
                     </div>
                   </div>
-                  <div className="box px-5 py-3 ml-4 flex-1 zoom-in">
-                    <div className="flex items-center">
-                      <div className="font-medium text-dark dark:text-white">Fat Whales Mint</div>
+                  <div className="flex items-center box px-5 py-3 ml-4 flex-1 zoom-in">
+                    <div>
+                      <div className="flex items-center">
+                        <div className="font-medium text-dark dark:text-white">
+                          Public Mint
+                        </div>
+                        
+                      </div>
+                      <div className="text-slate-500">
+                        <div className="mt-1">
+                          Mint on the current price
+                          
+                        </div>
+                      
+                      </div>
                     </div>
-                    <div className="text-slate-500 mt-1">
-                      Click Me
+                    <div className="text-xs text-slate-500 ml-auto">
+                        <AiOutlineArrowRight/>
+                    </div>
+                  </div>
+                </div>
+                <div className="intro-x relative flex items-center mb-3">
+                  <div className="before:block before:absolute before:w-20 before:h-px before:bg-slate-200 before:dark:bg-darkmode-400 before:mt-5 before:ml-5">
+                    <div className="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
+                      <img
+                        alt="Midone Tailwind HTML Admin Template"
+                        src={logoUrl}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex items-center box px-5 py-3 ml-4 flex-1 zoom-in">
+                    <div>
+                      <div className="flex items-center">
+                        <div className="font-medium text-dark dark:text-white">
+                          Mega Whale Mint
+                        </div>
+                        
+                      </div>
+                      <div className="text-slate-500">
+                        <div className="mt-1">
+                          Mint 10 plus HWMC NFT at once
+                        </div>
+                      
+                      </div>
+                    </div>
+                    <div className="text-xs text-slate-500 ml-auto">
+                        <AiOutlineArrowRight/>
                     </div>
                   </div>
                 </div>
